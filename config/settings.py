@@ -137,12 +137,9 @@ REST_FRAMEWORK = {
 }
 
 DJOSER = {
-    'LOGIN_FIELD': 'email',
-    'USER_CREATE_PASSWORD_RETYPE': True,
     'SERIALIZERS': {
-        'user_create': 'api.serializers.CustomUserCreateSerializer',
-        'user': 'djoser.serializers.UserSerializer',
-    },
+        'user_create': 'api.serializers.UserCreateSerializer',
+        'user': 'api.serializers.UserSerializer',
+    }
 }
-
 SITE_ID = 1
