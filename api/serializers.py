@@ -8,7 +8,7 @@ class UserCreateSerializer(BaseUserCreateSerializer):
         fields = ['id', 'username', 'password',
                   'email', 'first_name', 'last_name' , 'is_author']
     def create(self, validated_data):
-        is_author = validated_data.pop('is_author', False)
+        is_author = validated_data.pop('is_author')
         user = CustomUser.objects.create_user(**validated_data)
         if is_author:
             Author.objects.create(user=user)
