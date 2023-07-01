@@ -30,11 +30,11 @@ The API has the following endpoints:
 
 ### Users
 
-- `GET /api/users/`: Get a list of all users
-- `GET /api/users/:id/`: Get a single user by ID
+
+- `GET /auth/users/me/`: Get a single user by ID
 - `POST /auth/users/create/`: Create a new user
-- `PUT /api/users/:id/`: Update an existing user by ID
-- `DELETE /api/users/:id/`: Delete a user by ID
+- `PUT /api/users/me/`: Update an existing user by ID
+- `DELETE /api/users/me/`: Delete a user by ID
 
 ### Books
 
